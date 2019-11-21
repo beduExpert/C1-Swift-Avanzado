@@ -1,4 +1,3 @@
-
 `Desarrollo Mobile` > `Swift Intermedio 2`
 
 ## Optionals
