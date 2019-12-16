@@ -1,27 +1,40 @@
 `Desarrollo Mobile` > `Swift Intermedio 2`
 
 
-## Titulo del Ejemplo
+## Custom Components
 
 ### OBJETIVO
 
-- Lo que esperamos que el alumno aprenda
+- Crear clases de componentes de UI Personalizados.
 
 #### REQUISITOS
 
-1. Lo necesario para desarrollar el ejemplo o el Reto
+1. Xcode 11
 
 #### DESARROLLO
 
-Agrega las instrucciones generales del ejemplo o reto
+**Desarrollar**:
 
-<details>
+Subclases de los siguientes elementos:
 
-        <summary>Solucion</summary>
-        <p> Agrega aqui la solucion</p>
-        <p>Recuerda! escribe cada paso para desarrollar la solución del ejemplo o reto </p>
-</details>
+	- UIButton
+	- UILabel
+	- UICollectionViewCell
 
-Agrega una imagen dentro del ejemplo o reto para dar una mejor experiencia al alumno (Es forzoso que agregages al menos una) ![imagen](https://picsum.photos/200/300)
+Dichas subclases deben incorporar un Enum que permita establecer el tipo de elemento, ej.
 
+```
+case rounded
+```
 
+Indicará que se trata de un bo†ón redondo completamente.
+
+Otro ejemplo:
+
+```
+case roundedWithIcon
+```
+
+Indicará que el button lleva un Icono enmedio y además es redondo.
+
+Cada uno de los componentes debe implementar un Enum, un Protocolo y un extensión que de funcionalidad por default al protocoolo.
