@@ -4,9 +4,9 @@
 
 ### OBJETIVOS 
 
-- Aprender a maniuplar los Optionals tanto como en variables, como colecciones y evitar valores nulos.
+- Aprender a manipular los Optionals tanto como en variables, como colecciones y evitar valores nulos.
 - Crear código seguro y evitar errores utilizando estructura de manejo de Optionals.
-- Aprender que es un Observador.
+- Aprender qué es un Observador.
 - Utilizar las funciones de alto orden para Unwrapping. 
 
 #### ORGANIZACION DE LA CLASE 
