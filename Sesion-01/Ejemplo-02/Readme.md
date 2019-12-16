@@ -1,27 +1,50 @@
 `Desarrollo Mobile` > `Swift Intermedio 2`
 
-
-## Titulo del Ejemplo
+## Extensions, Protocolos y Mutating
 
 ### OBJETIVO
 
-- Lo que esperamos que el alumno aprenda
+- Reforzar el concepto de uso de Extensions con protocolos y mutating.
 
 #### REQUISITOS
 
-1. Lo necesario para desarrollar el ejemplo o el Reto
+1. Xcode 11
 
 #### DESARROLLO
 
-Agrega las instrucciones generales del ejemplo o reto
+Implementaremos un `Protocol`, un `Enum` y un `Extension`.
 
-<details>
+Llevaremos mediante un Exension implementación por defecto al Protocolo.
 
-        <summary>Solucion</summary>
-        <p> Agrega aqui la solucion</p>
-        <p>Recuerda! escribe cada paso para desarrollar la solución del ejemplo o reto </p>
-</details>
+A la definición del Protocolo:
+```
+protocol MarioLifes {
+  var numberLifes: Int { get set }
+  mutating func receivedDamage()
+}
+```
 
-Agrega una imagen dentro del ejemplo o reto para dar una mejor experiencia al alumno (Es forzoso que agregages al menos una) ![imagen](https://picsum.photos/200/300)
+Crearemos un Extension, con una implementación por defecto:
+```
+extension MarioLifes {
+  mutating func receivedDamage() {
+    numberLifes = 0
+  }
+}
+```
+Cabe mencionar que para poder editar el valor del property es necesario cambiarlo a `{ get set }`.
+
+Por consiguiente, esto provocará que al conformar el protocolo se deba escribir el códgo correspondiente al get y set de dicho computed property.
+
+```
+enum Mario: MarioLifes {
+  var numberLifes: Int {
+    get {
+      return 5
+    }
+    set {}
+  }
+}
+```
 
 

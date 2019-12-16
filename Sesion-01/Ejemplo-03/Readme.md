@@ -1,10 +1,10 @@
 `Desarrollo Mobile` > `Swift Intermedio 2`
 
-## Titulo del Ejemplo
+## Mutating Properties
 
 ### OBJETIVO
 
-- Reforzar el concepto de uso de Extensions con protocolos y mutating.
+- Aprender el uso de mutating en computed properties.
 
 #### REQUISITOS
 

@@ -1,34 +1,30 @@
 `Desarrollo Mobile` > `Swift Intermedio 2`
 
-## Optionals
+## Estructuras Mutables
 
 ### OBJETIVOS 
 
-- Aprender a manipular los Optionals tanto como en variables, como colecciones y evitar valores nulos.
-- Crear código seguro y evitar errores utilizando estructura de manejo de Optionals.
-- Aprender qué es un Observador.
-- Utilizar las funciones de alto orden para Unwrapping. 
+- Profundizar en el tema de la palabra mutating.
+- Implementar mutating tanto en structs, enums y protocols.
+- Recrear ejemplos con mayor complejidad con el objetivo de comprender mejor este concepto.
 
 #### ORGANIZACION DE LA CLASE 
 
-- Optionals con Data Types Nativos y Collections
-- Unwrap
-- Estructuras para manejo de Optionals: IF CASE LET, GUARD.
-
+- Estructuras mutables Enums
+- Conformando Protocols
 
 	- [Ejemplo 01](Ejemplo-01)
 	- [Reto 01](Reto-01)
 
-- Property Observers
+- Extensions
 
 	- [Ejemplo 02](Ejemplo-02)
 	- [Reto 02](Reto-02)
 
-- High order functions para Unwrapping.
+- Mutating properties y tracking.
 
 	- [Ejemplo 03](Ejemplo-03)
 	- [Reto 03](Reto-03)
-
 
 ### Postwork 
 
