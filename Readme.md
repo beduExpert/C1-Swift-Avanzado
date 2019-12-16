@@ -12,6 +12,6 @@
  - [Sesión 4](Sesion-04): Closures y Extensiones
  - [Sesión 5](Sesion-05): Manejo de cámara con AVCaptureSession
  - [Sesión 6](Sesion-06): Closures y Animations
- - [Sesión 7](Sesion-07): Consumo de serviios HTTP Rest
+ - [Sesión 7](Sesion-07): Consumo de servicios HTTP Rest
  - [Sesión 8](Sesion-08): Manejo de Gestures y Persistencia de Datos
 
