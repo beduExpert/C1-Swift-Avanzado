@@ -1,26 +1,55 @@
+
 `Desarrollo Mobile` > `Swift Intermedio 2`
 
-	
-## Titulo del Ejemplo 
+## Enums y Mutating
 
-### OBJETIVO 
+### OBJETIVO
 
-- Lo que esperamos que el alumno aprenda 
+-  Introducir al uso de protocolos con mutating.
 
-#### REQUISITOS 
+#### REQUISITOS
 
-1. Lo necesario para desarrollar el ejemplo o el Reto 
+1. Xcode 11
 
 #### DESARROLLO
 
-Agrega las instrucciones generales del ejemplo o reto
+En el **Ejemplo-01** se implementó un pequeño algoritmo para modificar las vidas de **Mario**. Conformaremos el **Protocolo** `MarioLifes`.
+Finalizamos con el código siguiente:
+
+ ```
+ enum Mario: MarioLifes {
+  case dead
+  case alive(numberOfLifes: Int)
+  
+  var numberLifes: Int {
+    switch self {
+    case .dead: return 0
+    case let .alive(numberLifes): return numberLifes
+    }
+  } 
+  mutating func receivedDamage() {
+    switch self {
+    case .dead:
+      self = .alive(numberOfLifes:0)
+    case let .alive(numberOfLifes):
+      if numberOfLifes <= 0 {
+        self = .dead
+      } else {
+        self = .alive(numberOfLifes: numberLifes - 1)
+      }
+    }
+  }
+}
+```
+
+El reto consiste en agregar mas funcionalidad a este código.
+
+**Agregar la funcionalidad de incrementar vida.**
 
 <details>
-
 	<summary>Solucion</summary>
-	<p> Agrega aqui la solucion</p>
-	<p>Recuerda! escribe cada paso para desarrollar la solución del ejemplo o reto </p>
+	<p> Crearemos una función de tipo mutating directamente en el extension de MarioLifes</p>
+	<p></p>
 </details> 
 
-Agrega una imagen dentro del ejemplo o reto para dar una mejor experiencia al alumno (Es forzoso que agregages al menos una) ![imagen](https://picsum.photos/200/300)
 

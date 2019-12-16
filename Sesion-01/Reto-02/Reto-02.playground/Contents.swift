@@ -1,6 +1,6 @@
 //
 //  MarioReto.swift
-//  
+//
 //
 //
 
@@ -15,6 +15,7 @@ extension MarioLifes {
   mutating func receivedDamage() {
     numberLifes = 0
   }
+  mutating
 }
 enum Mario: MarioLifes {
   var type: CharacterType {

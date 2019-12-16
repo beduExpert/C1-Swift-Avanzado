@@ -1,6 +1,7 @@
 protocol MarioLifes {
   var numberLifes: Int { get }
   mutating func receivedDamage()
+  mutating func incrementLife()
 }
 
 enum Mario: MarioLifes {
@@ -26,6 +27,10 @@ enum Mario: MarioLifes {
       }
     }
   }
+  
+  mutating func incrementLife() {
+    self = .alive(numberOfLifes: numberLifes + 1)
+  }
 }
 
 var mario = Mario.alive(numberOfLifes: 2)
@@ -37,4 +42,6 @@ mario.numberLifes
 mario.receivedDamage()
 mario.receivedDamage()
 mario.receivedDamage()
+print(mario.numberLifes)
+mario.incrementLife()
 print(mario.numberLifes)
