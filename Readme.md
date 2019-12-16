@@ -1,8 +1,13 @@
  
-## Módulo: Nombre del modulo
+## Módulo: Swift Avanzado
 
 ### OBJETIVO 
- - Agrega lo que van a aprender en el modulo
+
+- Durante las sesiones se reforzarán los temas más importantes de Swift como: 
+Enums, Structs, Concepto de Reference Type y Value Type, Mutating, Closures, Notification center, Generics, Servicios HTTP Rest.
+
+- Aprender nuevos temas como manejo de fotos con AVCaptureSession, Animations y Persistencia basica de datos.
+
 
 ### ORGANIZACIÓN DE MÓDULO 
  
