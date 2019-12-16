@@ -21,8 +21,10 @@ Interfaz sugerida:
 
 ![](0.png)
 
-<details>
-	<summary>Solucion</summary>
-	<p> Agrega aqui la solucion</p>
-	<p>Recuerda! escribe cada paso para desarrollar la solución del ejemplo o reto </p>
-</details> 
+Los componentes a implementar son:
+
+- CollectionView con un custom cell que tenga un UIImageView para poder mostrar fotos.
+- Un subview con dos Labels.
+- UIButton redondeado
+- UIImageView redondeado
+- Todo en el ViewController principal.
