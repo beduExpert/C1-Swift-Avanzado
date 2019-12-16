@@ -6,26 +6,56 @@
 
 import Foundation
 
-protocol MarioLifes {
-  var numberLifes: Int { get set }
-  var type: CharacterType { get set }
+enum CharacterType {
+  case Mario
+  case Luigi
+}
+
+protocol Damage {
   mutating func receivedDamage()
 }
-extension MarioLifes {
+
+protocol Lifes: Damage {
+  var numberLifes: Int { get set }
+  mutating func receivedDamage()
+}
+extension Lifes {
   mutating func receivedDamage() {
     numberLifes = 0
   }
-  mutating
 }
-enum Mario: MarioLifes {
+
+// Mario
+protocol MarioLifes: Lifes {
+  var type: CharacterType { get }
+}
+extension MarioLifes {
   var type: CharacterType {
-    get {
-      .Mario
-    }
-    set {
-    }
+    .Mario
   }
-  
+}
+
+// Luigi
+protocol LuigiLifes: Lifes {
+  var type: CharacterType { get }
+}
+extension LuigiLifes {
+  var type: CharacterType {
+    .Luigi
+  }
+}
+
+// Implementation
+enum Mario: MarioLifes {
+  var numberLifes: Int {
+    get {
+      return 5
+    }
+    set {}
+  }
+}
+
+enum Luigi: LuigiLifes {
   var numberLifes: Int {
     get {
       return 5
