@@ -1,8 +1,3 @@
-//
-//  MarioReto.swift
-//
-//
-//
 
 import Foundation
 
@@ -49,7 +44,7 @@ extension LuigiLifes {
 enum Mario: MarioLifes {
   var numberLifes: Int {
     get {
-      return 5
+      return 8
     }
     set {}
   }
@@ -58,7 +53,7 @@ enum Mario: MarioLifes {
 enum Luigi: LuigiLifes {
   var numberLifes: Int {
     get {
-      return 5
+      return 2
     }
     set {}
   }
