@@ -9,6 +9,12 @@ Enums, Structs, Concepto de Reference Type y Value Type, Mutating, Closures, Not
 
 - Aprender nuevos temas como manejo de fotos con AVCaptureSession, Animations y Persistencia basica de datos.
 
+### Requisitos
+
+- Xcode 11
+- Contraseña administrador
+- iPhone con iOS 13.
+
 
 ### ORGANIZACIÓN DE MÓDULO 
  
