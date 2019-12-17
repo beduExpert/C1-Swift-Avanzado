@@ -1,6 +1,5 @@
-`Desarrollo Mobile` > `Swift Intermedio 2`
+`Desarrollo Mobile` > `Swift Avanzado`
 
-	
 ## Game Character Type Implementation 
 
 ### OBJETIVO 
