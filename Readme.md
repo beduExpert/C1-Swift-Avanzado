@@ -13,7 +13,7 @@ Enums, Structs, Concepto de Reference Type y Value Type, Mutating, Closures, Not
 
 - Xcode 11
 - Contraseña administrador
-- iPhone con iOS 13.
+- iPhone con iOS 13 y cable USB-Lightning.
 
 
 ### ORGANIZACIÓN DE MÓDULO 
