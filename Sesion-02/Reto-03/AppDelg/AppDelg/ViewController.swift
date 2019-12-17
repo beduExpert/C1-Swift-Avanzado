@@ -11,7 +11,7 @@ class ViewController: UIViewController {
   
   @IBOutlet weak var label: UILabel!
   let viewModel: ViewModel = ViewModel()
-  
+
   override func viewDidLoad() {
     super.viewDidLoad()
   }
