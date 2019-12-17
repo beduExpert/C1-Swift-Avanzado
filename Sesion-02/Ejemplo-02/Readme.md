@@ -1,27 +1,63 @@
 `Desarrollo Mobile` > `Swift Avanzado`
 
 
-## Titulo del Ejemplo
+## Migración de código a Extensions
 
 ### OBJETIVO
 
-- Lo que esperamos que el alumno aprenda
+- Migrar el código mostrado hacia protocolos, Extensions y clases utilizando `where Self`.
 
 #### REQUISITOS
 
-1. Lo necesario para desarrollar el ejemplo o el Reto
+1. Xcode 11
 
 #### DESARROLLO
 
-Agrega las instrucciones generales del ejemplo o reto
+Dado el siguiente código, crear el `Protocol` y extensión para que el `UIButton` funcione de la misma manera.
 
-<details>
+![](0.png)
 
-        <summary>Solucion</summary>
-        <p> Agrega aqui la solucion</p>
-        <p>Recuerda! escribe cada paso para desarrollar la solución del ejemplo o reto </p>
-</details>
+1.- Comenzaremos creando un protocolo para indicar que el button tendra un efecto cuando lo presionemos:
 
-Agrega una imagen dentro del ejemplo o reto para dar una mejor experiencia al alumno (Es forzoso que agregages al menos una) ![imagen](https://picsum.photos/200/300)
+```
+protocol Jump {
+  func jump()
+}
+```
 
+2.- Con un extension agregaremos la animación.
 
+```
+extension Jump where Self: UIButton {
+  func jump() {
+  	// code...
+  }
+}
+```
+
+3.- Ya que `Self` apunta a `UIButton`, entonces `Self` es una referencia directa al `UIButton`, tenemos sus propiedades y funciones.
+
+```
+self.transform = CGAffineTransform(scaleX: 0.50, y: 0.50)
+```
+
+Y para la animación:
+
+```
+UIView.animate(withDuration: 2.0,
+                   delay: 0,
+                   usingSpringWithDamping: 0.2,
+                   initialSpringVelocity: 6.0,
+                   options: .allowUserInteraction,
+                   animations: { [weak self] in
+                    self?.transform = .identity},completion: nil)
+```
+
+4.- Finalmente la clase del UIButton conformará el protocolo `Jump`.
+
+```
+public class JumpButton: UIButton, Jump {
+	// ...
+}
+```
+ 
