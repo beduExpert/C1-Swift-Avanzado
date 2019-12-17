@@ -23,3 +23,6 @@ Este patrón debe contener las capas:
 - Models
 - View
 
+
+Además, agregaar un Segundo ViewController.
+Este segundo ViewController puede quedar vacio.
