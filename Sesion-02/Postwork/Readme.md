@@ -1,27 +1,25 @@
 `Desarrollo Mobile` > `Swift Avanzado`
 
 
-## Titulo del Ejemplo
+## App
 
 ### OBJETIVO
 
-- Lo que esperamos que el alumno aprenda
+- Implementar el patrón de MVVM en la app de Galeria desarrollada en el Reto-03 de la sesión-01.
 
 #### REQUISITOS
 
-1. Lo necesario para desarrollar el ejemplo o el Reto
+1. Proyecto del Reto-03 de la Sesión-01 terminado.
+2. Xcode 11
 
 #### DESARROLLO
 
-Agrega las instrucciones generales del ejemplo o reto
+Como se vió en el Ejemplo-03 y Reto-03 de esta sesión. 
+Recrear el patrón MVVM en el proyecto de la galeria visto en la sesión-01 en el Reto-03.
 
-<details>
+Este patrón debe contener las capas:
 
-        <summary>Solucion</summary>
-        <p> Agrega aqui la solucion</p>
-        <p>Recuerda! escribe cada paso para desarrollar la solución del ejemplo o reto </p>
-</details>
-
-Agrega una imagen dentro del ejemplo o reto para dar una mejor experiencia al alumno (Es forzoso que agregages al menos una) ![imagen](https://picsum.photos/200/300)
-
+- ViewModel
+- Models
+- View
 
