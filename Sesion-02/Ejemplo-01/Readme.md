@@ -5,23 +5,58 @@
 
 ### OBJETIVO
 
-- Lo que esperamos que el alumno aprenda
+-  Identificar que el extensión es solo para aquellas clases del tipo que Self indica y solo para aquellas que conforman su protocolo.
 
 #### REQUISITOS
 
-1. Lo necesario para desarrollar el ejemplo o el Reto
+1. Xcode 11
 
 #### DESARROLLO
 
-Agrega las instrucciones generales del ejemplo o reto
+Crear una clase `ViewControllerB` que **NO** conforme el protocolo `ProtocolName`.
 
-<details>
+Debe heredar de `UIViewController`.
 
-        <summary>Solucion</summary>
-        <p> Agrega aqui la solucion</p>
-        <p>Recuerda! escribe cada paso para desarrollar la solución del ejemplo o reto </p>
-</details>
+¿Es posible acceder a los valores del Extensión mediante el `ViewControllerB`?
 
-Agrega una imagen dentro del ejemplo o reto para dar una mejor experiencia al alumno (Es forzoso que agregages al menos una) ![imagen](https://picsum.photos/200/300)
+1.- Comenzamos creando un protocolocon alguna función:
 
+```
+protocol ProtocolName {
+    func doSomething()
+}
+```
 
+2.- Con un Extension podemos agregarle funcionalidad, por ejemplo agregar otro metodo/función.
+Pero esta vez queremos que el protocolo solo pueda ser implementado por la clase `UIViewController`.
+
+Entonces agregamos una función nueva a solo esta clase:
+
+```
+extension ProtocolName where Self: UIViewController {
+    func blah() {
+        print("Blah")
+    }
+}
+```
+
+**El código completo:**
+
+```
+import UIKit
+
+protocol ProtocolName {
+    func doSomething()
+}
+extension ProtocolName where Self: UIViewController {
+    func blah() {
+        print("Blah")
+    }
+}
+
+class ViewController : UIViewController, ProtocolName {
+    func doSomething() {
+        print("Do Something");
+    }
+}
+```
