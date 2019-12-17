@@ -8,7 +8,6 @@
 import UIKit
 
 protocol RegistrableCell: class {
-  
   static var nibName: String { get }
   static var reuseId: String { get }
 }
