@@ -16,7 +16,7 @@ extension Currency {
 }
 
 var c = Currency.MXN
-c["Dolares"]
+c["Mexico"]
 
 
 
