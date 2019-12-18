@@ -5,11 +5,12 @@
 
 ### OBJETIVO 
 
-- Lo que esperamos que el alumno aprenda 
+- Implementación de generics con parámetros que conformen un protocolo.
+
 
 #### REQUISITOS 
 
-1. Lo necesario para desarrollar el ejemplo o el Reto 
+1. Xcode 11
 
 #### DESARROLLO
 
