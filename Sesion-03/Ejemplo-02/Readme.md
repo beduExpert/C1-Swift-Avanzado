@@ -1,26 +1,38 @@
 `Desarrollo Mobile` > `Swift Avanzado`
 
-## Titulo del Ejemplo
+## Generics y múltiples parámetros
 
 ### OBJETIVO
 
-- Lo que esperamos que el alumno aprenda
+- Implementación de generics con múltiples parámetros.
 
 #### REQUISITOS
 
-1. Lo necesario para desarrollar el ejemplo o el Reto
+1. Xcode 11
 
 #### DESARROLLO
 
-Agrega las instrucciones generales del ejemplo o reto
+Comenzamos a crear una función comun de dos parámetros, esta función recibirá el mismo tipo de dato en ambos parámetros. ya que no queremos crear una función para manejar Ints y otra para manejar Strings (por dar un ejemplo), creamos una función generica.
 
-<details>
+```
+func anotherMethod<T> (first: T, second: T) {
+  print("Mismo tipo de datos")
+}
+```
 
-        <summary>Solucion</summary>
-        <p> Agrega aqui la solucion</p>
-        <p>Recuerda! escribe cada paso para desarrollar la solución del ejemplo o reto </p>
-</details>
+Ahora, queremos manejar tipos de datos diferentes, creamos una variante de Generic utilizando DOS generics.
 
-Agrega una imagen dentro del ejemplo o reto para dar una mejor experiencia al alumno (Es forzoso que agregages al menos una) ![imagen](https://picsum.photos/200/300)
+```
+func anotherMethod<T, U> (first: T, second: U) {
+   print("Distinto tipo de datos")
+}
+```
 
+Finalmente probamos dichas funciones:
+
+```
+// Implementation
+anotherMethod(first: 123, second: 456)
+anotherMethod(first: 123, second: "456")
+```
 
