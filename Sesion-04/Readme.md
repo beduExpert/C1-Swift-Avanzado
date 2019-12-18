@@ -14,9 +14,10 @@
 
 #### ORGANIZACION DE LA CLASE 
 
-Manejo de la cámara con AVCaptureSession Captura de imágenes y galeria.
-Funciones con manejo de errores, Throws. 
-Try-Catch
+- Manejo de la cámara con AVCaptureSession 
+- Captura de imágenes y galeria.
+- Funciones con manejo de errores, Throws. 
+- Try-Catch
 
 - Tema que veran en el ejemplo
 
