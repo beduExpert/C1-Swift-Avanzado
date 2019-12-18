@@ -1,6 +1,6 @@
 `Desarrollo Mobile` > `Swift Avanzado`
 	
-## Titulo del Ejemplo 
+## Enums y Subscripts 
 
 ### OBJETIVO 
 
