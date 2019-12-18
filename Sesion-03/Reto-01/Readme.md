@@ -4,22 +4,70 @@
 
 ### OBJETIVO 
 
-- Lo que esperamos que el alumno aprenda 
+- Crear una app básica que envíe un notification via Post.
 
 #### REQUISITOS 
 
-1. Lo necesario para desarrollar el ejemplo o el Reto 
+1. Xcode 11
 
 #### DESARROLLO
 
-Agrega las instrucciones generales del ejemplo o reto
+Crear una App con dos `ViewControllers`.
+
+En el **VC1**, crearemos el algoritmo para registrar el **Notification**.
+
+Se observará cuando el **VC2** aparece, entonces mostraremos en consola un mensaje.
+
+Al mostrarse la segunda vista, en el `viewDidLoad()` enviar el post hacia el NotificationCenter.
+
+En el **VC2** agregamos un `deinit{}`, dentro de este un print para asegurar que se ejecuta el apagado del Notification.
 
 <details>
+	<summary>Solución</summary>
+<p>Declaramos un id que servirá para identificar a nuestra notificación.</p>
 
-	<summary>Solucion</summary>
-	<p> Agrega aqui la solucion</p>
-	<p>Recuerda! escribe cada paso para desarrollar la solución del ejemplo o reto </p>
+```
+  let bedu = "com.app.bedu"
+```
+
+<p>Creamos dos ViewControllers en el Storyboard. Por medio de un UIButton navegaremos hacia el segundo VC2.</p>
+
+![](0.gif)
+
+<p> Creamos una función que será agregada al Notification.</p>
+
+```
+@objc func methodOfReceivedNotification(notification: Notification) {
+    // Take Action on Notification
+    print("Hola")
+}
+```
+
+<p> Creamos el Notification, pasándole como parámetro la función.</p>
+	
+```
+NotificationCenter.default.addObserver(self, selector: #selector(methodOfReceivedNotification(notification:)),
+                                           name: Notification.Name(bedu),
+                                           object: nil)
+```	
+<p> En el VC2 creamos el POST del notification en el ViewDidload()</p>
+
+```
+override func viewDidAppear(_ animated: Bool) {
+    super.viewDidAppear(animated)
+    NotificationCenter.default.post(name: Notification.Name(bedu), object: nil)
+  }
+```
+
+<p> Removemos dicha notificación al salir del VC2.</p>
+
+```
+  // Remove notification
+  deinit {
+    print("bye")
+    NotificationCenter.default.removeObserver(self, name: Notification.Name(bedu), object: nil)
+  }
+```
+
 </details> 
-
-Agrega una imagen dentro del ejemplo o reto para dar una mejor experiencia al alumno (Es forzoso que agregages al menos una) ![imagen](https://picsum.photos/200/300)
 

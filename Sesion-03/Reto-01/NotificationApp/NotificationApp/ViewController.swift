@@ -15,7 +15,8 @@ class ViewController: UIViewController {
     super.viewDidLoad()
     // Do any additional setup after loading the view.
     NotificationCenter.default.addObserver(self, selector: #selector(methodOfReceivedNotification(notification:)),
-                                           name: Notification.Name(bedu), object: nil)
+                                           name: Notification.Name(bedu),
+                                           object: nil)
   }
   
   @objc func methodOfReceivedNotification(notification: Notification) {
