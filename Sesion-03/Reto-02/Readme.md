@@ -1,7 +1,7 @@
  
 `Desarrollo Mobile` > `Swift Avanzado`
 	
-## Titulo del Ejemplo 
+## Generics, funciones y protocolos comparables
 
 ### OBJETIVO 
 
