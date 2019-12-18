@@ -2,13 +2,21 @@
 `Desarrollo Mobile` > `Swift Intermedio 2`
 
 
-## Titulo de la Sesion 
+##  Closures y Animations
 
 ### OBJETIVOS 
 
 - Lo que esperamos que el alumno aprenda al finalizar la sesion 
 
 #### ORGANIZACION DE LA CLASE 
+
+Closures
+- Escaping keyword 
+- Completions Handlers
+
+Animations
+- Fade, Bounce 
+- Custom animations
 
 - Tema que veran en el ejemplo
 
