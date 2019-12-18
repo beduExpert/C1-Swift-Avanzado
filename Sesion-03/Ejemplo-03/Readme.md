@@ -1,15 +1,16 @@
 `Desarrollo Mobile` > `Swift Avanzado`
 
 
-## Titulo del Ejemplo
+## Implementacion de Subscripts
 
 ### OBJETIVO
 
-- Lo que esperamos que el alumno aprenda
+- Implementación de un Subscript en una clase.
 
 #### REQUISITOS
 
-1. Lo necesario para desarrollar el ejemplo o el Reto
+1. Xcode 11
+2. Playgrounds
 
 #### DESARROLLO
 
