@@ -1,26 +1,29 @@
 `Desarrollo Mobile` > `Swift Avanzado`
 
-## Titulo del Ejemplo
+
+## App
 
 ### OBJETIVO
 
-- Lo que esperamos que el alumno aprenda
+- Implementar el uso de notifications/observers en el proyecto de la App
 
 #### REQUISITOS
 
-1. Lo necesario para desarrollar el ejemplo o el Reto
+1. último codigo del proyecto.
+2. Xcode 11
 
 #### DESARROLLO
 
-Agrega las instrucciones generales del ejemplo o reto
+El proyecto debe tener las siguientes capas:
 
-<details>
+- ViewModel
+- Models
+- View
 
-        <summary>Solucion</summary>
-        <p> Agrega aqui la solucion</p>
-        <p>Recuerda! escribe cada paso para desarrollar la solución del ejemplo o reto </p>
-</details>
+1.- A la vista principal agregar Una función Generica que funcione para mostrar información en el recuadro rojo. Los valores a tratar son `Int` y `String`.
 
-Agrega una imagen dentro del ejemplo o reto para dar una mejor experiencia al alumno (Es forzoso que agregages al menos una) ![imagen](https://picsum.photos/200/300)
+![](1.png)
 
+2.- Al presionar el botón de Camara, ir a una segunda vista. Al regresar a la vista principal, la imágen de profile debe agregarse un Circulo de borde de color. Usar solo un color solido. Usar Notifications. Ejemplo:
 
+![](0.png)
