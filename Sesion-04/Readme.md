@@ -1,4 +1,4 @@
-`Desarrollo Mobile` > `Swift Intermedio 2`
+`Desarrollo Mobile` > `Swift Avanzado`
 
 ## Manejo de cámara con AVCaptureSession
 
