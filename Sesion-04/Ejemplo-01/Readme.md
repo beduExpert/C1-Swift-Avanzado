@@ -1,27 +1,75 @@
 `Desarrollo Mobile` > `Swift Avanzado`
 
-
-## Titulo del Ejemplo
+## Throws, manejando errores
 
 ### OBJETIVO
 
-- Lo que esperamos que el alumno aprenda
+- Implementar una clase que arroje un error definido previamente.
 
 #### REQUISITOS
 
-1. Lo necesario para desarrollar el ejemplo o el Reto
+1. Xcode 11
+2. Playgrounds
 
 #### DESARROLLO
 
-Agrega las instrucciones generales del ejemplo o reto
+Implementaremos la siguiente clase que arrojará un error en caso de que el dulce NO esté en el inventario.
 
-<details>
+Crearemos un  enum de errores a manejar, debe ser de tipo `Error`.
 
-        <summary>Solucion</summary>
-        <p> Agrega aqui la solucion</p>
-        <p>Recuerda! escribe cada paso para desarrollar la solución del ejemplo o reto </p>
-</details>
+```
+enum OxxoErrors: Error {
+  case NoTenemosJoven
+}
+```
 
-Agrega una imagen dentro del ejemplo o reto para dar una mejor experiencia al alumno (Es forzoso que agregages al menos una) ![imagen](https://picsum.photos/200/300)
+La clase debe arrojar este error si cumple la condición. La condición es basicamente si existe el producto en el Array dado.
 
+```
+var inventario = ["HotDog": Item(price: 20, count: 10),
+                  "Maruchan": Item(price: 12, count: 5)]
+```
 
+La clase tendrá una función, el `guard` en dicha función se encargará de mandarnos a la condición de error, es ahí donde arrojaremos el Throw.
+
+```
+func comprar(item name: String) throws {
+    guard let item = inventario[name] else {
+      throw OxxoErrors.NoTenemosJoven
+    }
+    print("Pagando: $ \(item.price) MXN")
+    print("Gracias vuelva pronto")
+  }
+```
+
+El codigo final:
+
+```
+
+struct Item {
+  var price: Int
+  var count: Int
+}
+
+enum OxxoErrors: Error {
+  case NoTenemosJoven
+}
+
+class Oxxo {
+  var inventario = ["HotDog": Item(price: 20, count: 10),
+                    "Maruchan": Item(price: 12, count: 5)]
+  
+  func comprar(item name: String) throws {
+    guard let item = inventario[name] else {
+      throw OxxoErrors.NoTenemosJoven
+    }
+    print("Pagando: $ \(item.price) MXN")
+    print("Gracias vuelva pronto")
+  }
+}
+
+let o = Oxxo()
+try o.comprar(item: "Pizza")
+```
+  
+  

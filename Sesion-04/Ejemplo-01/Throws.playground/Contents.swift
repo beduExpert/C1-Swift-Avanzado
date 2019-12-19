@@ -23,11 +23,5 @@ class Oxxo {
 }
 
 let o = Oxxo()
-do {
-  try o.comprar(item: "Pizza")
-} catch OxxoErrors.NoTenemosJoven {
-  print("Ya le dije que no tenemos")
-}
-//try! o.comprar(item: "Pizza")
-//try? o.comprar(item: "Pizza")
+try o.comprar(item: "Pizza")
 
