@@ -2,26 +2,54 @@
 `Desarrollo Mobile` > `Swift Avanzado`
 
 	
-## Titulo del Ejemplo 
+## Init y throws
 
 ### OBJETIVO 
 
-- Lo que esperamos que el alumno aprenda 
+- Implementar una estructura que tenga un inicializador/constructor con throws.
+
 
 #### REQUISITOS 
 
-1. Lo necesario para desarrollar el ejemplo o el Reto 
+1. Xcode 11
+2. Playgrounds 
 
 #### DESARROLLO
 
-Agrega las instrucciones generales del ejemplo o reto
+Así como implementamos una función con throws.
+
+Implementar una estructura que tenga un inicializador/constructor con throws.
+
+La estructura está conformada:
+
+- Nombre struct: ComprarDulces
+- Init: NombreDulce, Tienda.
 
 <details>
+	<summary>Solución</summary>
+<p> Creamos la estructura de nombre ComprarDulces</p>
 
-	<summary>Solucion</summary>
-	<p> Agrega aqui la solucion</p>
-	<p>Recuerda! escribe cada paso para desarrollar la solución del ejemplo o reto </p>
+```
+struct ComprarDulces {
+ //...
+}
+```	
+
+<p> Así como una función, agregamos el 	throws` al final de la función. </p>
+	
+```
+init(nombre: String, tienda: Oxxo) throws {
+}
+```
+
+<p> Finalmente la implementación utilizando un *try* simple:</p>
+
+```
+struct ComprarDulces {
+  init(nombre: String, tienda: Oxxo) throws {
+    try tienda.comprar(item: nombre)
+  }
+}
+```
+
 </details> 
-
-Agrega una imagen dentro del ejemplo o reto para dar una mejor experiencia al alumno (Es forzoso que agregages al menos una) ![imagen](https://picsum.photos/200/300)
-
