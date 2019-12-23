@@ -1,27 +1,18 @@
 
-agrega el programa que se desarrollara con backticks> [agrega la sesion con backticks]
+`Desarrollo Mobile` > `Swift Avanzado`
 
-## Titulo del Ejemplo
+## POSTWORK
 
 ### OBJETIVO
 
-- Lo que esperamos que el alumno aprenda
+- Implementar animaciones anidadas, para recrear el efecto de bounce en un elemento de UIView.
 
 #### REQUISITOS
 
-1. Lo necesario para desarrollar el ejemplo o el Reto
+1. Xcode 11
 
 #### DESARROLLO
 
-Agrega las instrucciones generales del ejemplo o reto
+1.- Con base a lo visto de UIView animations, crear un codigo que permita reproducir la sig. animación.
 
-<details>
-
-        <summary>Solucion</summary>
-        <p> Agrega aqui la solucion</p>
-        <p>Recuerda! escribe cada paso para desarrollar la solución del ejemplo o reto </p>
-</details>
-
-Agrega una imagen dentro del ejemplo o reto para dar una mejor experiencia al alumno (Es forzoso que agregages al menos una) ![imagen](https://picsum.photos/200/300)
-
-
+![](postwork.gif)
