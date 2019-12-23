@@ -1,7 +1,6 @@
 
 `Desarrollo Mobile` > `Swift Avanzado`
 
-
 ##  Closures y Animations
 
 ### OBJETIVOS 
