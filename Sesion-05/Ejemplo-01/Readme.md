@@ -1,6 +1,7 @@
 `Desarrollo Mobile` > `Swift Avanzado`
 
-## Titulo del Ejemplo
+## Completion Handler
+
 
 ### OBJETIVO
 
