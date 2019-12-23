@@ -1,27 +1,49 @@
 
-agrega el programa que se desarrollara con backticks> [agrega la sesion con backticks]
+`Desarrollo Mobile` > `Swift Avanzado`
 
-## Titulo del Ejemplo
+## Implementación de parámetros con @escaping.
 
 ### OBJETIVO
 
-- Lo que esperamos que el alumno aprenda
+- Introducir la sintaxis básica y funcionamiento de esta palabra reservada.
 
 #### REQUISITOS
 
-1. Lo necesario para desarrollar el ejemplo o el Reto
+1. Xcode 11
 
 #### DESARROLLO
 
-Agrega las instrucciones generales del ejemplo o reto
+Comenzamos a partir del esqueleto de función definido en el Reto-01:
 
-<details>
+```
+import UIKit
 
-        <summary>Solucion</summary>
-        <p> Agrega aqui la solucion</p>
-        <p>Recuerda! escribe cada paso para desarrollar la solución del ejemplo o reto </p>
-</details>
+protocol RequestImages {}
+struct ImageProvider: RequestImages {
+  fileprivate let downloadQueue =
+    DispatchQueue(label: "com.bedu.download.images", qos: DispatchQoS.background)
+  
+  //MARK: - Fetch image from URL and Images cache
+  func loadImages(from url: URL, completion: (_ image: UIImage) -> Void) {
+    downloadQueue.async(execute: {})
+  }
+}
+```
 
-Agrega una imagen dentro del ejemplo o reto para dar una mejor experiencia al alumno (Es forzoso que agregages al menos una) ![imagen](https://picsum.photos/200/300)
+A partir de esta función, ejecutaremos la acción de desargar imagen.
+Usamos `Data` y le pasamos como parámetro una `url`:
 
+```
+do {
+   let data = try Data(contentsOf: url)
+    
+} catch { print("Could not load URL: \(url): \(error)") }
+```
 
+Posteriormente, manejaremos la respuesta, si es exitosa tendremos nuestra imagen, la cual gracias a un dispatchQueue convertiremos en Imagen.
+
+```
+if let image = UIImage(data: data) {
+   DispatchQueue.main.async { completion(image) }
+} else { print("Could not decode image") }
+```
