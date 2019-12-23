@@ -1,27 +1,23 @@
+`Desarrollo Mobile` > `Swift Avanzado`
 
-agrega el programa que se desarrollara con backticks> [agrega la sesion con backticks]
-
-## Titulo del Ejemplo
+## Integración Alamofire con App galeria/fotos
 
 ### OBJETIVO
 
-- Lo que esperamos que el alumno aprenda
+- En la vista principal, alimentar el CollectionView con fotos descargadas de internet mediante peticiones `GET`.
 
 #### REQUISITOS
 
-1. Lo necesario para desarrollar el ejemplo o el Reto
+1. Xcode 11
+2. Proyecto de App que permita tomar fotos.
 
 #### DESARROLLO
 
-Agrega las instrucciones generales del ejemplo o reto
+1.- Tener funcionando la última versión del proyecto de la App.
 
-<details>
+2.- Agregar la configuración de `AppTransportSecurity` para poder integrar peticiones HTTP.
 
-        <summary>Solucion</summary>
-        <p> Agrega aqui la solucion</p>
-        <p>Recuerda! escribe cada paso para desarrollar la solución del ejemplo o reto </p>
-</details>
+3.- Crear una capa de DataManager que se encargue de las peticiones.
 
-Agrega una imagen dentro del ejemplo o reto para dar una mejor experiencia al alumno (Es forzoso que agregages al menos una) ![imagen](https://picsum.photos/200/300)
-
+4.- Con el patrón delegate enviar la respuesta del servicio a la vista principal.
 
