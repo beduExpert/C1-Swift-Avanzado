@@ -1,27 +1,35 @@
 
 `Desarrollo Mobile` > `Swift Avanzado`
 
-## Titulo del Ejemplo
+## Implementación de Animations
 
 ### OBJETIVO
 
-- Lo que esperamos que el alumno aprenda
+- Implementación de animaciones basicas de traslación y aumento de tamaño.
 
 #### REQUISITOS
 
-1. Lo necesario para desarrollar el ejemplo o el Reto
+1. Xcode 11
 
 #### DESARROLLO
 
-Agrega las instrucciones generales del ejemplo o reto
+Implementar una App con dos ImageViews.
 
-<details>
+Aplicar un Animate closure para hacer diferentes tipos de animaciones como traslación, escalamiento y rotación.
 
-        <summary>Solucion</summary>
-        <p> Agrega aqui la solucion</p>
-        <p>Recuerda! escribe cada paso para desarrollar la solución del ejemplo o reto </p>
-</details>
+![](1.gif)
 
-Agrega una imagen dentro del ejemplo o reto para dar una mejor experiencia al alumno (Es forzoso que agregages al menos una) ![imagen](https://picsum.photos/200/300)
+1.- Creamo sun nuevo proyecto con Swift como lenguaje.
 
+2.- Agregamos al Main storyboard dos UIImageViews.
 
+3.- Conectamos con el ViewController los IBOutlets.
+
+4.- Implementamos un bloque de UIView para animations.
+
+```
+UIView.animate(withDuration: 2.0, animations: { () -> Void in
+      self.image1.center = self.view.center
+    })
+```
+5.- Implementar mas variantes.
