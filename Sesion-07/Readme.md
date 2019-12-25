@@ -1,6 +1,5 @@
 
-`Desarrollo Mobile` > `Swift Intermedio 2`
- 
+`Desarrollo Mobile` > `Swift Avanzado`
 
 ## Titulo de la Sesion 
 
