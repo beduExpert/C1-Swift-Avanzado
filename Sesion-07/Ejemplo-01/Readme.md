@@ -1,27 +1,23 @@
 
 `Desarrollo Mobile` > `Swift Avanzado`
 
-## Titulo del Ejemplo
+## Gestures, primeros pasos
 
 ### OBJETIVO
 
-- Lo que esperamos que el alumno aprenda
+- Comenzar con la implementación de Gestures.
+- Implementación de un PanGesture.
 
 #### REQUISITOS
 
-1. Lo necesario para desarrollar el ejemplo o el Reto
+1. Xcode 11
 
 #### DESARROLLO
 
-Agrega las instrucciones generales del ejemplo o reto
+1.- Crear un nuevo proyecto en `Xcode`.
+2.- Agregaremos un `ImageView` en el `Main.Storyboard`.
+3.- Conectamos con el `ViewController` declarando los `IBOutlets` correspondientes.
+4.- Abrimos el Library y buscamos *gesture*.
+5.- Agregamos el Pan Gesture a cada imagen, arrastrando dicho elemento dentro de cada imagen.
 
-<details>
-
-        <summary>Solucion</summary>
-        <p> Agrega aqui la solucion</p>
-        <p>Recuerda! escribe cada paso para desarrollar la solución del ejemplo o reto </p>
-</details>
-
-Agrega una imagen dentro del ejemplo o reto para dar una mejor experiencia al alumno (Es forzoso que agregages al menos una) ![imagen](https://picsum.photos/200/300)
-
-
+![](0.gif)
