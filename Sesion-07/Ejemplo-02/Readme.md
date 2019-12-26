@@ -1,27 +1,33 @@
 
 `Desarrollo Mobile` > `Swift Avanzado`
 
-## Titulo del Ejemplo
+## Gesture Methods
 
 ### OBJETIVO
 
-- Lo que esperamos que el alumno aprenda
+- Implementación de los estados de un gesture recognizer.
 
 #### REQUISITOS
 
-1. Lo necesario para desarrollar el ejemplo o el Reto
+1. Xcode 11
 
 #### DESARROLLO
 
-Agrega las instrucciones generales del ejemplo o reto
+1.- Implementaremos los métodos de `UIGestureRecognizer` para detectar cuando iniciamos/terminamos la interacción.
 
-<details>
+2.- Cada recognizer tiene un property llamado `state`.
 
-        <summary>Solucion</summary>
-        <p> Agrega aqui la solucion</p>
-        <p>Recuerda! escribe cada paso para desarrollar la solución del ejemplo o reto </p>
-</details>
+3.- Comparar el `state` del `recognizer` de la función asociada al Gesture. Luego con el State "genera" o valor general del UIGestureRecognizer.
 
-Agrega una imagen dentro del ejemplo o reto para dar una mejor experiencia al alumno (Es forzoso que agregages al menos una) ![imagen](https://picsum.photos/200/300)
+4.- Para implementar con el Pan Gesture:
 
-
+```
+  @IBAction func pan(sender: UIPanGestureRecognizer) {
+    if sender.state == UIGestureRecognizer.State.began {
+      print("Inicio gesture")
+    }
+    else if sender.state == UIGestureRecognizer.State.ended {
+      print("fin gesture")
+    }
+  }
+```
