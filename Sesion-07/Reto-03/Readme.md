@@ -30,10 +30,10 @@ La idea es implementar alguno o ambos gestures.
 <p> Creamos un property de tipo Gesture, el que deseemos implementar. puede ser PinchGesture o PanGesture.</p>
 
 ```
-let pinchGesture = UIPinchGestureRecognizer(target: self,
-                                                      action: #selector(pinchGesture(sender:)))
+	let pinchGesture = UIPinchGestureRecognizer(target: self,
+                                                      action: 	#selector(pinchGesture(sender:)))
 ```                                                
-	<p> Al Image agregamos el Gesture:</p>
+<p> Al Image agregamos el Gesture:</p>
 	
 ```
 imageView.addGestureRecognizer(pinchGesture)
