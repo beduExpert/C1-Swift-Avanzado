@@ -1,26 +1,41 @@
 
 `Desarrollo Mobile` > `Swift Avanzado`
 
-## Titulo del Ejemplo 
+## Implementación de mas gestures
 
 ### OBJETIVO 
 
-- Lo que esperamos que el alumno aprenda 
+- Implementar alguno o ambos gestures tales como `UIPinchGestureRecognizer` o bien `UIScreenEdgePanGestureRecognizer`.
 
 #### REQUISITOS 
 
-1. Lo necesario para desarrollar el ejemplo o el Reto 
+1. Xcode 11 
 
 #### DESARROLLO
 
-Agrega las instrucciones generales del ejemplo o reto
+Implementar de manera programática el gesto de Pinch y el gesto de ScreenEdgePan.
+
+Con lo visto en los ejemplos anteriores se deberá ser capaz de resolver este reto.
+La idea es implementar alguno o ambos gestures.
 
 <details>
+	<summary>Solución</summary>
+	<p>Crearemos un proyecto con un View o ImageView al cuál le agregaremos uno o dos gestures. </p>
+	<p> A dicho view le habilitamos el property para que pueda detectar interacciones touch.</p>
 
-	<summary>Solucion</summary>
-	<p> Agrega aqui la solucion</p>
-	<p>Recuerda! escribe cada paso para desarrollar la solución del ejemplo o reto </p>
+```
+	imageView.isMultipleTouchEnabled = true
+	imageView.isUserInteractionEnabled = true
+```
+<p> Creamos un property de tipo Gesture, el que deseemos implementar. puede ser PinchGesture o PanGesture.</p>
+
+```
+let pinchGesture = UIPinchGestureRecognizer(target: self,
+                                                      action: #selector(pinchGesture(sender:)))
+```                                                
+	<p> Al Image agregamos el Gesture:</p>
+	
+```
+imageView.addGestureRecognizer(pinchGesture)
+```
 </details> 
-
-Agrega una imagen dentro del ejemplo o reto para dar una mejor experiencia al alumno (Es forzoso que agregages al menos una) ![imagen](https://picsum.photos/200/300)
-

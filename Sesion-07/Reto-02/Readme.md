@@ -1,7 +1,7 @@
  
 `Desarrollo Mobile` > `Swift Avanzado`
 
-## Titulo del Ejemplo 
+## Reto gesture animations
 
 ### OBJETIVO 
 
