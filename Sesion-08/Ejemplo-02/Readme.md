@@ -1,11 +1,11 @@
 
 `Desarrollo Mobile` > `Swift Avanzado`
 
-## Ejemplo-02
+## Operaciones CRUD, creación y lectura.
 
 ### OBJETIVO
 
-- Aprender a utilizar CoreData.
+- Implementar las operaciones CRUD. Especificamente la operación de Creación y Lectura en CoreData.
 
 #### REQUISITOS
 
@@ -17,5 +17,27 @@
 
 ![](1.png)
 
+2.- En la clase de DataManager implementaremos el sig. código:
 
+```
+    guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return nil }
+    let managedContext = appDelegate.persistentContainer.viewContext
+    
+    let fetchRequest = NSFetchRequest<NSFetchRequestResult> (entityName: "User")
+    fetchRequest.fetchLimit = 1
+```
+
+Ya obenemos el objeto Data, ahora en el Viewcontroller usaremos esta función del DataManager.
+
+```
+  @IBAction func load(_ sender: Any) {
+    guard let data = datamanager.retrieve() else { return }
+    label.text = data.value(forKey: "email") as? String
+  }
+```
+3.- El siguiente Layout debe implementarse:
+
+![](2.png)
+
+4.- En los campos de texto agregaremos valores de email y password, el botón de Save guardará los datos. Y con Load mostraremos los datos almacenados en el Label.
 
