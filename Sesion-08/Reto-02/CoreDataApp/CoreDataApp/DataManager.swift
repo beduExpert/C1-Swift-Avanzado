@@ -34,7 +34,6 @@ class DataManager {
   func retrieve() -> NSManagedObject? {
     guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return nil }
     let managedContext = appDelegate.persistentContainer.viewContext
-    
     let fetchRequest = NSFetchRequest<NSFetchRequestResult> (entityName: "User")
     fetchRequest.fetchLimit = 1
     
