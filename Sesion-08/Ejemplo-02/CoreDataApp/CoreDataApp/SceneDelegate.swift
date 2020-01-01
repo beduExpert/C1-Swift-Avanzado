@@ -1,8 +1,7 @@
 //
 //  SceneDelegate.swift
-//  Ejemplo02-UserDefaults
+//  CoreDataApp
 //
-//  Created by Ricardo Montesinos on 01/01/20.
 //  Copyright © 2020 Bedu. All rights reserved.
 //
 

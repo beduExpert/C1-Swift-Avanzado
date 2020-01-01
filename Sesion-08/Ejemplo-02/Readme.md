@@ -1,12 +1,11 @@
 
 `Desarrollo Mobile` > `Swift Avanzado`
 
-
-## Eliminar datos almacenados por UserDefaults
+## Ejemplo-02
 
 ### OBJETIVO
 
-- Conocer las operaciones de UserDefaults.
+- Aprender a utilizar CoreData.
 
 #### REQUISITOS
 
@@ -14,20 +13,9 @@
 
 #### DESARROLLO
 
-1.- De los datos almacenados en el `Ejemplo-01`.
- 
-2.- Agregar un boton que permita limpiar el `UserDefaults`.
+1.- Crearemos un nuevo proyecto, esta vez seleccionando la sig. opción.
 
-3.- Opcionalmente:
-Guardar los datos como un Array.
+![](1.png)
 
-<details>
-        <summary>Solución</summary>
-        <p>Agregamos un Button en el ViewController y lo conectamos con su respectivo IBAction.</p>
-        <p>Dentro de ese IBAction usaremos la función remove proporcionada por UserDefaults. </p>
-```
-    UserDefaults.standard.removeObject(forKey: key1)
-```
-</details>
 
 
