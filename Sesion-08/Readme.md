@@ -9,7 +9,7 @@
 - Cómo almacenar datos mientras la 
 App no está en ejecución.
 - Almacenar datos de tipo numérico, de tipo bool, String hasta objetos.
-
+- Conocer las distintas formas de almacenar datos de manera local en una App. Implementar modelos Entidad-Relación en Core data y aplicar operaciones CRUD en objetos almacenados.
 
 #### ORGANIZACION DE LA CLASE 
 
