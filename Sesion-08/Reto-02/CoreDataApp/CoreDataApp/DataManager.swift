@@ -51,14 +51,37 @@ class DataManager {
     return nil
   }
   
-  //UPDATE
-  func update() {
-    
+  // UPDATE
+  // Update Password
+  func update(email: String, password: String) {
+    guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
+    let managedContext = appDelegate.persistentContainer.viewContext
+    let fetchRequest = NSFetchRequest<NSFetchRequestResult> (entityName: "User")
+    fetchRequest.predicate = NSPredicate(format: "email = %@", email)
+    do {
+      let result = try managedContext.fetch(fetchRequest)
+      let updateObject = result[0] as! NSManagedObject
+      updateObject.setValue(password, forKey: "password")
+      try managedContext.save()
+    } catch {
+    }
   }
   
   //DELETE
-  func delete() {
+  func delete(email: String) {
+    guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
+    let managedContext = appDelegate.persistentContainer.viewContext
+    let fetchRequest = NSFetchRequest<NSFetchRequestResult> (entityName: "User")
+    fetchRequest.predicate = NSPredicate(format: "email = %@", email)
     
+    do {
+      let data = try managedContext.fetch(fetchRequest)
+      let objectToDelete = data[0] as! NSManagedObject
+      managedContext.delete(objectToDelete)
+      try managedContext.save()
+    } catch {
+      
+    }
   }
   
 }
