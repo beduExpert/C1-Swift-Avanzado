@@ -16,10 +16,10 @@ class ViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    Alamofire.request(url, parameters: [:]).responseObject { (response: DataResponse<User>) in
+    Alamofire.request(url, parameters: [:]).responseObject { (response: DataResponse<Animals>) in
       switch response.result {
       case .success(var results):
-        print(response)
+        print(results)
       case .failure(let error):
         print(error)
       }

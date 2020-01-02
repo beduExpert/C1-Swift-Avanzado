@@ -8,36 +8,32 @@
 import Foundation
 import ObjectMapper
 
-struct User: Mappable {
+struct Animals: Mappable {
+
+  var animals: [Animal]?
   
-  var firstName: String?
-  var lastName :String?
-  var age: Int?
-  var address: Address?
-  
-  init?(map: Map) {}
+  init?(map: Map) {
+  }
   
   mutating func mapping(map: Map) {
-    self.firstName <- map["firstName"]
-    self.lastName  <- map["lastName"]
-    self.age       <- map["age"]
-    self.address   <- map["address"]
+    self.animals <- map["animals"]
   }
 }
 
-struct Address: Mappable {
+struct Animal: Mappable {
   
-  var streetAddress: String?
-  var city: String?
-  var state: String?
-  var postalCode: Int?
+  var id: String?
+  var name :String?
+  var type: Int?
+  var weight: Int?
   
-  init?(map: Map) {}
+  init?(map: Map) {
+  }
   
   mutating func mapping(map: Map) {
-    self.streetAddress <- map["streetAddress"]
-    self.city  <- map["city"]
-    self.state <- map["state"]
-    self.postalCode <- map["postalCode"]
+    self.id   <- map["id"]
+    self.name <- map["name"]
+    self.type <- map["type"]
+    self.weight <- map["weight"]
   }
 }
