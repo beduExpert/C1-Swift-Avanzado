@@ -1,27 +1,37 @@
- 
+`Desarrollo Mobile` > `Swift Avanzado`
 
-agrega el programa que se desarrollara con backticks> [agrega la sesion con backticks] 
-	
-## Titulo del Ejemplo 
+## Código para descarga de imágenes.
 
 ### OBJETIVO 
 
-- Lo que esperamos que el alumno aprenda 
+- Armar una función que servirá de esqueleto para descargar imágenes de manera asíncrona.
 
 #### REQUISITOS 
 
-1. Lo necesario para desarrollar el ejemplo o el Reto 
+1. Xcode 11
+2. Playgrounds
 
 #### DESARROLLO
 
-Agrega las instrucciones generales del ejemplo o reto
+Código para descarga de imágenes.
+Implementar un esqueleto que incluya un `queue`.
+El `queue` tendrá prioridad de `.background`.
+Y una **función** con un completion definido.
+El queue ejecutará algún bloque, solo dejarlo indicado con `{}`.
 
 <details>
+	<summary>Solución</summary>
+	<p> Comenzamos definiendo un DispatchQueue, agregando su tag o identificador, y un quality of service de tipo background. </p>
 
-	<summary>Solucion</summary>
-	<p> Agrega aqui la solucion</p>
-	<p>Recuerda! escribe cada paso para desarrollar la solución del ejemplo o reto </p>
+```
+DispatchQueue(label: "com.bedu.download.images", qos: DispatchQoS.background)
+```
+
+<p> Definiremos una función con dos parámetros, uno de URL, y un completion. </p>
+<p> El queue definido se encargará de ejecutar un bloque de codigo, dejaremos esto indicado. </p>
+```
+func loadImages(from url: URL, completion: (_ image: UIImage) -> Void) {
+    downloadQueue.async(execute: {})
+}
+```
 </details> 
-
-Agrega una imagen dentro del ejemplo o reto para dar una mejor experiencia al alumno (Es forzoso que agregages al menos una) ![imagen](https://picsum.photos/200/300)
-

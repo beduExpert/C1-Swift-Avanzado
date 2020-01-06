@@ -1,27 +1,95 @@
+`Desarrollo Mobile` > `Swift Avanzado`
 
-agrega el programa que se desarrollara con backticks> [agrega la sesion con backticks]
 
-## Titulo del Ejemplo
+## Implementacion de Subscripts
 
 ### OBJETIVO
 
-- Lo que esperamos que el alumno aprenda
+- Implementación de un Subscript en una clase.
 
 #### REQUISITOS
 
-1. Lo necesario para desarrollar el ejemplo o el Reto
+1. Xcode 11
+2. Playgrounds
 
 #### DESARROLLO
 
-Agrega las instrucciones generales del ejemplo o reto
+Pensemos en sobreescribir el operador [] para proveer de atajos para acceder a elementos de una colección, clase, estructura o enumeración.
 
-<details>
+La sintaxis de un `subscript` es como sigue:
 
-        <summary>Solucion</summary>
-        <p> Agrega aqui la solucion</p>
-        <p>Recuerda! escribe cada paso para desarrollar la solución del ejemplo o reto </p>
-</details>
+```
+subscript(parameterList) -> ReturnType {
+	get {
+		// return someValue of ReturnType
+	}
+	set(newValue){
+		//set someValue of ReturnType to new Value
+	}	
+}
+```
 
-Agrega una imagen dentro del ejemplo o reto para dar una mejor experiencia al alumno (Es forzoso que agregages al menos una) ![imagen](https://picsum.photos/200/300)
+Un `subscript` se parece tanto a una `función` y de un `computed-property`.
+
+* Se pueden tener `variadic parameters`, pero no es posible usar `inout` o `default`parameters. Tampoco pueden arrojar errores.
+
+Vemos que tienen tanto setter como getter, el setter es opcional, por lo tanto el subscript puede ser tanto de lectura-escritura o solo de lectura.
+
+El valor `newValue` del setter puede ser omitido.
+
+*Ejemplo*: Agreguemos un `subscript` a la clase `Persona`:
+
+``` Swift
+class Person {
+  let name: String
+  let age: Int
+  init(name: String, age: Int) {
+    self.name = name
+    self.age = age
+  }
+}
+```
+``` Swift
+let me = Person(name: "Richie", age: 27)
+```
+Ahora intentemos acceder a sus valores con:
+
+```
+me["name"]
+me["age"]
+```
+Pero pero pero... Xcode te arroja un error:
+
+>  Type "Person" has no subscripts members
+
+![](subscript1.png)
+
+Claro, no se ha definido ningún Subscript, definamos uno:
+
+``` Swift
+extension Person {
+	subscript(key: String) -> String? {
+		switch key {
+			case "name":
+				return name //String
+			case "age":
+				return "\(age)" // Int
+			default:
+				return nil
+		}
+	}
+}
+```
+
+Resultado:
+
+![](subscript2.png)
+
+
+
+
+
+
+
 
 

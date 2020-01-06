@@ -1,11 +1,11 @@
+`Desarrollo Mobile` > `Swift Avanzado`
 
-agrega el programa que se desarrollara con backticks> [agrega la sesion con backticks]
+## Completion Handler
 
-## Titulo del Ejemplo
 
 ### OBJETIVO
 
-- Lo que esperamos que el alumno aprenda
+- Armar una función que servirá de esqueleto para descargar imágenes de manera asíncrona.
 
 #### REQUISITOS
 
@@ -13,15 +13,39 @@ agrega el programa que se desarrollara con backticks> [agrega la sesion con back
 
 #### DESARROLLO
 
-Agrega las instrucciones generales del ejemplo o reto
 
-<details>
+Declarar un `Dispatch Queue` de prioridad `.background`.
+Crear la funcion, con parametros `URL` y `completion`.
+El completion es `@escaping (_ image: UIImage) -> Void`.
 
-        <summary>Solucion</summary>
-        <p> Agrega aqui la solucion</p>
-        <p>Recuerda! escribe cada paso para desarrollar la solución del ejemplo o reto </p>
-</details>
+Comenzamos declarando una variable de tipo ` (Bool) -> Void`, esta es asignada a una variable. A esto le llamaremos bloque.
+Dentro del bloque ejecutaremos alguna tarea de cumplirse la condición previa en el IF.
 
-Agrega una imagen dentro del ejemplo o reto para dar una mejor experiencia al alumno (Es forzoso que agregages al menos una) ![imagen](https://picsum.photos/200/300)
+```
+let handlerBlock: (Bool) -> Void = { value in
+  if value {
+    print("Condicion se cumple")
+  }
+}
+```
 
+Declaramos una función que tendrá como parámetro un completion. El completion ejecutará el bloque previamente definido, por lo tanto es necesario definir dicho completion del mismo tipo para asegurar compatibilidad.
+
+```
+func functionHandler(completion: (Bool) -> Void) {
+  completion(false)
+}
+```
+
+Finalmente, ejecutamos la función:
+
+```
+functionHandler { (doneWork) in
+  if doneWork {
+    print("Condición SI se cumple")
+  } else {
+    print("No...")
+  }
+}
+```
 

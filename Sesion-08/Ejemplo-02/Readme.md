@@ -1,27 +1,43 @@
 
-agrega el programa que se desarrollara con backticks> [agrega la sesion con backticks]
+`Desarrollo Mobile` > `Swift Avanzado`
 
-## Titulo del Ejemplo
+## Operaciones CRUD, creación y lectura.
 
 ### OBJETIVO
 
-- Lo que esperamos que el alumno aprenda
+- Implementar las operaciones CRUD. Especificamente la operación de Creación y Lectura en CoreData.
 
 #### REQUISITOS
 
-1. Lo necesario para desarrollar el ejemplo o el Reto
+1. Xcode 11
 
 #### DESARROLLO
 
-Agrega las instrucciones generales del ejemplo o reto
+1.- Crearemos un nuevo proyecto, esta vez seleccionando la sig. opción.
 
-<details>
+![](1.png)
 
-        <summary>Solucion</summary>
-        <p> Agrega aqui la solucion</p>
-        <p>Recuerda! escribe cada paso para desarrollar la solución del ejemplo o reto </p>
-</details>
+2.- En la clase de DataManager implementaremos el sig. código:
 
-Agrega una imagen dentro del ejemplo o reto para dar una mejor experiencia al alumno (Es forzoso que agregages al menos una) ![imagen](https://picsum.photos/200/300)
+```
+    guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return nil }
+    let managedContext = appDelegate.persistentContainer.viewContext
+    
+    let fetchRequest = NSFetchRequest<NSFetchRequestResult> (entityName: "User")
+    fetchRequest.fetchLimit = 1
+```
 
+Ya obenemos el objeto Data, ahora en el Viewcontroller usaremos esta función del DataManager.
+
+```
+  @IBAction func load(_ sender: Any) {
+    guard let data = datamanager.retrieve() else { return }
+    label.text = data.value(forKey: "email") as? String
+  }
+```
+3.- El siguiente Layout debe implementarse:
+
+![](2.png)
+
+4.- En los campos de texto agregaremos valores de email y password, el botón de Save guardará los datos. Y con Load mostraremos los datos almacenados en el Label.
 

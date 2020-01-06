@@ -1,27 +1,67 @@
- 
 
-agrega el programa que se desarrollara con backticks> [agrega la sesion con backticks] 
-	
-## Titulo del Ejemplo 
+`Desarrollo Mobile` > `Swift Avanzado`
 
-### OBJETIVO 
+## Operaciones CRUD, actualización y eliminación de datos.
 
-- Lo que esperamos que el alumno aprenda 
+### OBJETIVO
 
-#### REQUISITOS 
+- Implementar las operaciones CRUD. Especificamente la operación de Update y Delete en CoreData.
 
-1. Lo necesario para desarrollar el ejemplo o el Reto 
+#### REQUISITOS
+
+1. Xcode 11
+2. Ejemplo-02 completo.
 
 #### DESARROLLO
 
-Agrega las instrucciones generales del ejemplo o reto
+1.- Abrir el `DataManager` y agregar dos funciones, una para actualizar datos y otra para eliminarlos.
+
+2.- Obtener los datos ingresando el email y actualizar el password.
+El uso de un predicado sera necesario.
+
+```
+fetchRequest.predicate = NSPredicate(format: "email = %@", email)
+```
+3.- Para la eliminación de datos usaremos la función `.delete()`, esta función recibe un objeto de tipo `NSManagedObject`.
 
 <details>
+	<summary>Solución</summary>
+	<p>La función de `Update`, tendrá dos parámetros, email y password. Usaremos un `FetchRequest` para obtener el dato que coincida con el email proporcionado.
+	 Utilizaremos un Predicate para hacer el filtrado. </p>
 
-	<summary>Solucion</summary>
-	<p> Agrega aqui la solucion</p>
-	<p>Recuerda! escribe cada paso para desarrollar la solución del ejemplo o reto </p>
+```
+	 func update(email: String, password: String) {
+    guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
+    let managedContext = appDelegate.persistentContainer.viewContext
+    let fetchRequest = NSFetchRequest<NSFetchRequestResult> (entityName: "User")
+    fetchRequest.predicate = NSPredicate(format: "email = %@", email)
+    do {
+      let result = try managedContext.fetch(fetchRequest)
+      let updateObject = result[0] as! NSManagedObject
+      updateObject.setValue(password, forKey: "password")
+      try managedContext.save()
+    } catch {
+    }
+  }
+```
+
+<p> La implementación de la función Delete, comienza de la misma manera que UPDATE. La diferencia radica en el uso de la función `delete` de managedContext.</p>
+	
+```
+func delete(email: String) {
+    guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
+    let managedContext = appDelegate.persistentContainer.viewContext
+    let fetchRequest = NSFetchRequest<NSFetchRequestResult> (entityName: "User")
+    fetchRequest.predicate = NSPredicate(format: "email = %@", email)
+    
+    do {
+      let data = try managedContext.fetch(fetchRequest)
+      let objectToDelete = data[0] as! NSManagedObject
+      managedContext.delete(objectToDelete)
+      try managedContext.save()
+    } catch {
+      
+    }
+  }
+```	
 </details> 
-
-Agrega una imagen dentro del ejemplo o reto para dar una mejor experiencia al alumno (Es forzoso que agregages al menos una) ![imagen](https://picsum.photos/200/300)
-

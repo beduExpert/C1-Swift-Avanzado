@@ -1,27 +1,24 @@
 
-agrega el programa que se desarrollara con backticks> [agrega la sesion con backticks]
+`Desarrollo Mobile` > `Swift Avanzado`
 
-## Titulo del Ejemplo
+## Programmatic gestures
 
 ### OBJETIVO
 
-- Lo que esperamos que el alumno aprenda
+- Implementar gestures sin necesidad de usar Storyboard.
 
 #### REQUISITOS
 
-1. Lo necesario para desarrollar el ejemplo o el Reto
+1. Xcode 11
 
 #### DESARROLLO
 
-Agrega las instrucciones generales del ejemplo o reto
+Implementar de manera programática el gesto de Pan.
 
-<details>
+Basarse en el Ejemplo-01.
 
-        <summary>Solucion</summary>
-        <p> Agrega aqui la solucion</p>
-        <p>Recuerda! escribe cada paso para desarrollar la solución del ejemplo o reto </p>
-</details>
+Por medio del `sender` obtener el valor del `state` y compararlo con los tres mas importantes como `began` o `ended`.
 
-Agrega una imagen dentro del ejemplo o reto para dar una mejor experiencia al alumno (Es forzoso que agregages al menos una) ![imagen](https://picsum.photos/200/300)
+El IF-ELSE debe implementarse. La idea detrás de esto es “debuggear” los estados, ver como funciona cada uno de ellos al interacturar con los gestures.
 
-
+![](0.png)

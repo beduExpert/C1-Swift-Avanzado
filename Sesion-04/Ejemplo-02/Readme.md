@@ -1,27 +1,32 @@
+`Desarrollo Mobile` > `Swift Avanzado`
 
-agrega el programa que se desarrollara con backticks> [agrega la sesion con backticks]
 
-## Titulo del Ejemplo
+## Catching errors
 
 ### OBJETIVO
 
-- Lo que esperamos que el alumno aprenda
+- Implementar una estructura do-catch para manejar el error definido.
 
 #### REQUISITOS
 
-1. Lo necesario para desarrollar el ejemplo o el Reto
+1. Xcode 11
+2. Playgrounds
+
 
 #### DESARROLLO
 
-Agrega las instrucciones generales del ejemplo o reto
+Implementación de la clase del `Ejemplo-01` con: 
 
-<details>
+`try!` y `try?`
 
-        <summary>Solucion</summary>
-        <p> Agrega aqui la solucion</p>
-        <p>Recuerda! escribe cada paso para desarrollar la solución del ejemplo o reto </p>
-</details>
+Manejar el error con `do-catch`.
 
-Agrega una imagen dentro del ejemplo o reto para dar una mejor experiencia al alumno (Es forzoso que agregages al menos una) ![imagen](https://picsum.photos/200/300)
+Para poder manejar `try` sin ningún operador adicional tales como `!` o `?` es necesario utilizar la estructura `do-catch`.
 
+despues de `do {` agregamos el código que es potencialmente susceptible a errores.
 
+Dicho esto, podemos utilizar la palabra `try`.
+
+Finalmente en la parte del `catch` podemos dejarlo simplemente como es o agregar un error. En caso de agegar un error solo entrará a ese bloque de código si y solo si ese error ocurre, de lo contrario es ignorado.
+
+![](0.png)

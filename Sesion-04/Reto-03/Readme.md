@@ -1,27 +1,33 @@
  
+`Desarrollo Mobile` > `Swift Avanzado`
 
-agrega el programa que se desarrollara con backticks> [agrega la sesion con backticks] 
-	
-## Titulo del Ejemplo 
+## Integración AVCaptureSession con Proyecto de App
 
 ### OBJETIVO 
 
-- Lo que esperamos que el alumno aprenda 
+- Integrar el código del Ejemplo-03 con el proyecto de App.
 
 #### REQUISITOS 
 
-1. Lo necesario para desarrollar el ejemplo o el Reto 
+1. Xcode 11
+2. Ejemplo-03 funcionando
+3. iPhone con iOS 13
+4. Cable Lightning
 
 #### DESARROLLO
 
-Agrega las instrucciones generales del ejemplo o reto
+Una vez que el Ejemplo-03 este funcionando.
+
+En el proyecto de la app, en el **ViewControllerB** actualmente en blanco el cuál es mostrado al presionar el botón de cámara, implementar la funcionalidad de cámara.
+
+Es decir, al aparecer el **ViewControllerB** se debe cargar la funcionalidad de camará.
+
+Al tomar una fotografía, poder regresar a la vista principal y agregar dicha fotografía en el CollectionView.
+
+El orden de las fotos no es importane.
+
 
 <details>
-
 	<summary>Solucion</summary>
 	<p> Agrega aqui la solucion</p>
-	<p>Recuerda! escribe cada paso para desarrollar la solución del ejemplo o reto </p>
 </details> 
-
-Agrega una imagen dentro del ejemplo o reto para dar una mejor experiencia al alumno (Es forzoso que agregages al menos una) ![imagen](https://picsum.photos/200/300)
-
